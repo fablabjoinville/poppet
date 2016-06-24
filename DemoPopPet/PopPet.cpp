@@ -29,15 +29,51 @@ void PopPet::VirarDireita(){
 void PopPet::AndarFrente(){
   s1.attach(pinMotor1);
   s2.attach(pinMotor2);
-  s1.write(200);
-  s2.write(0);
+  s1.write(0);
+  s2.write(200);
 }
 
 void PopPet::AndarTras(){
   s1.attach(pinMotor1);
   s2.attach(pinMotor2);
+  s1.write(200);
+  s2.write(0);
+}
+
+void PopPet::VirarEsquerda(int tempo){
+  s1.attach(pinMotor1);
+  s2.attach(pinMotor2);
+  s1.write(0);
+  s2.write(0);
+  delay(tempo);
+  Parar();
+}
+
+void PopPet::VirarDireita(int tempo){
+  s1.attach(pinMotor1);
+  s2.attach(pinMotor2);
+  s1.write(200);
+  s2.write(200);
+  delay(tempo);
+  Parar();
+}
+
+void PopPet::AndarFrente(int tempo){
+  s1.attach(pinMotor1);
+  s2.attach(pinMotor2);
   s1.write(0);
   s2.write(200);
+  delay(tempo);
+  Parar();
+}
+
+void PopPet::AndarTras(int tempo){
+  s1.attach(pinMotor1);
+  s2.attach(pinMotor2);
+  s1.write(200);
+  s2.write(0);
+  delay(tempo);
+  Parar();
 }
 
 void PopPet::Parar(){

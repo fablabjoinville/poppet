@@ -22,6 +22,10 @@ class PopPet{
     void VirarDireita();
     void AndarFrente();
     void AndarTras();
+    void VirarEsquerda(int tempo);
+    void VirarDireita(int tempo);
+    void AndarFrente(int tempo);
+    void AndarTras(int tempo);
     void Parar();
     long Distancia();
 };
